@@ -116,11 +116,27 @@ def get_size(path: Path) -> str:
     return f"~ {size_in_kb} KB"
 
 def decodeImage(imgstring, fileName):
+    """
+    Decodes a base64-encoded string into raw binary image bytes, and writes it to disk as a physical file at the specified fileName
+
+    Args:
+        imgstring (str): base64-encoded string of the image.
+        fileName (str): path to save the decoded image.
+    """
     imgdata = base64.b64decode(imgstring)
     with open(fileName, 'wb') as f:
         f.write(imgdata)
         f.close()
 
 def encodeImageIntoBase64(croppedImagePath):
+    """
+    Opens an image file from disk (croppedImagePath) in binary read mode, reads its bytes, and encodes it into a base64 string representation.
+    
+    Args:
+        croppedImagePath (str): path to the cropped image.
+        
+    Returns:
+        str: base64-encoded string of the image.
+    """
     with open(croppedImagePath, "rb") as f:
         return base64.b64encode(f.read())
