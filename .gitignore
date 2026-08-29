@@ -1,4 +1,5 @@
 logs/
+artifacts/
 research/test.yaml
 notes.md
 diagram.excalidraw
@@ -6,6 +7,7 @@ diagram.excalidraw
 __pycache__/
 *.py[codz]
 *$py.class
+test.yaml
 
 # C extensions
 *.so
