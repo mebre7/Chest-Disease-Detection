@@ -1,6 +1,6 @@
 logs/
 artifacts/
-research/test.yaml
+test.yaml
 notes.md
 diagram.excalidraw
 # Byte-compiled / optimized / DLL files
@@ -157,7 +157,7 @@ activemq-data/
 # Environments
 .env
 .envrc
-.venv
+.venv/
 env/
 venv/
 ENV/
